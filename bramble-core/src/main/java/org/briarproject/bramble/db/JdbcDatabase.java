@@ -47,6 +47,7 @@ import java.util.logging.Logger;
 
 import javax.annotation.Nullable;
 
+import static java.util.logging.Level.INFO;
 import static java.util.logging.Level.WARNING;
 import static org.briarproject.bramble.api.db.Metadata.REMOVE;
 import static org.briarproject.bramble.api.sync.Group.Visibility.INVISIBLE;
@@ -314,6 +315,7 @@ abstract class JdbcDatabase implements Database<Connection> {
 				storeSchemaVersion(txn);
 			}
 			createIndexes(txn);
+			if (LOG.isLoggable(INFO)) countAndLogRows(txn);
 			commitTransaction(txn);
 		} catch (DbException e) {
 			abortTransaction(txn);
@@ -394,6 +396,40 @@ abstract class JdbcDatabase implements Database<Connection> {
 			tryToClose(s);
 			throw new DbException(e);
 		}
+	}
+
+	private void countAndLogRows(Connection txn) throws DbException {
+		Statement s = null;
+		try {
+			s = txn.createStatement();
+			countAndLogRows(s, "settings");
+			countAndLogRows(s, "localAuthors");
+			countAndLogRows(s, "contacts");
+			countAndLogRows(s, "groups");
+			countAndLogRows(s, "groupMetadata");
+			countAndLogRows(s, "groupVisibilities");
+			countAndLogRows(s, "messages");
+			countAndLogRows(s, "messageMetadata");
+			countAndLogRows(s, "messageDependencies");
+			countAndLogRows(s, "offers");
+			countAndLogRows(s, "statuses");
+			countAndLogRows(s, "transports");
+			countAndLogRows(s, "incomingKeys");
+			countAndLogRows(s, "outgoingKeys");
+			s.close();
+		} catch (SQLException e) {
+			tryToClose(s);
+			throw new DbException(e);
+		}
+	}
+
+	private void countAndLogRows(Statement s, String tableName)
+			throws SQLException {
+		ResultSet rs = s.executeQuery("SELECT COUNT (*) FROM " + tableName);
+		if (rs.next())
+			LOG.info("Table " + tableName + ": " + rs.getInt(1) + " rows");
+		else LOG.warning("Table " + tableName + " could not be counted");
+		rs.close();
 	}
 
 	private String insertTypeNames(String s) {
