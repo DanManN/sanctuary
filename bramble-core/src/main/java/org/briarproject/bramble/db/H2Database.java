@@ -12,6 +12,7 @@ import java.io.File;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.Properties;
 
 import javax.annotation.Nullable;
@@ -54,9 +55,15 @@ class H2Database extends JdbcDatabase {
 
 	@Override
 	public void close() throws DbException {
-		// H2 will close the database when the last connection closes
+		// H2 will close the database when the last connection closes, so open
+		// a connection to perform compacting before closing other connections
 		try {
+			Connection c = createConnection();
 			super.closeAllConnections();
+			Statement s = c.createStatement();
+			s.execute("SHUTDOWN COMPACT");
+			s.close();
+			c.close();
 		} catch (SQLException e) {
 			throw new DbException(e);
 		}
