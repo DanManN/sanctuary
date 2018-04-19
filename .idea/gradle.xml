@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/bramble-android" />
+            <option value="$PROJECT_DIR$/bramble-api" />
+            <option value="$PROJECT_DIR$/bramble-core" />
+            <option value="$PROJECT_DIR$/bramble-j2se" />
+            <option value="$PROJECT_DIR$/briar-android" />
+            <option value="$PROJECT_DIR$/briar-api" />
+            <option value="$PROJECT_DIR$/briar-core" />
+          </set>
+        </option>
+        <option name="resolveModulePerSourceSet" value="false" />
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>
