@@ -71,9 +71,9 @@ import static android.support.v4.app.NotificationCompat.CATEGORY_SOCIAL;
 import static java.util.logging.Level.WARNING;
 import static org.briarproject.briar.android.activity.BriarActivity.GROUP_ID;
 import static org.briarproject.briar.android.contact.ConversationActivity.CONTACT_ID;
-import static org.briarproject.briar.android.navdrawer.NavDrawerActivity.INTENT_BLOGS;
+import static org.briarproject.briar.android.navdrawer.NavDrawerActivity.INTENT_JOURNEY;
 import static org.briarproject.briar.android.navdrawer.NavDrawerActivity.INTENT_CONTACTS;
-import static org.briarproject.briar.android.navdrawer.NavDrawerActivity.INTENT_FORUMS;
+import static org.briarproject.briar.android.navdrawer.NavDrawerActivity.INTENT_EMERGENCY;
 import static org.briarproject.briar.android.navdrawer.NavDrawerActivity.INTENT_GROUPS;
 import static org.briarproject.briar.android.settings.SettingsFragment.SETTINGS_NAMESPACE;
 
@@ -504,7 +504,7 @@ class AndroidNotificationManagerImpl implements AndroidNotificationManager,
 			} else {
 				// Touching the notification shows the forum list
 				Intent i = new Intent(appContext, NavDrawerActivity.class);
-				i.putExtra(INTENT_FORUMS, true);
+				i.putExtra(INTENT_JOURNEY, true);
 				i.setFlags(FLAG_ACTIVITY_CLEAR_TOP);
 				i.setData(Uri.parse(FORUM_URI));
 				TaskStackBuilder t = TaskStackBuilder.create(appContext);
@@ -561,7 +561,7 @@ class AndroidNotificationManagerImpl implements AndroidNotificationManager,
 			setDeleteIntent(b, BLOG_URI);
 			// Touching the notification shows the combined blog feed
 			Intent i = new Intent(appContext, NavDrawerActivity.class);
-			i.putExtra(INTENT_BLOGS, true);
+			i.putExtra(INTENT_EMERGENCY, true);
 			i.setFlags(FLAG_ACTIVITY_CLEAR_TOP);
 			i.setData(Uri.parse(BLOG_URI));
 			TaskStackBuilder t = TaskStackBuilder.create(appContext);

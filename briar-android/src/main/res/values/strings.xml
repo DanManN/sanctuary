@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+	<!--<string name="app_name">Sanctuary</string>-->
+
 	<!-- Setup -->
-	<string name="setup_title">Welcome to Briar</string>
+	<string name="setup_title">Welcome to Sanctuary</string>
 	<string name="setup_name_explanation">Your nickname will be shown next to any content you post. You can\'t change it after creating your account.</string>
 	<string name="setup_next">Next</string>
 	<string name="setup_password_intro">Choose a Password</string>
-	<string name="setup_password_explanation">Your Briar account is stored encrypted on your device, not in the cloud. If you forget your password or uninstall Briar, there\'s no way to recover your account.\n\nChoose a long password that\'s hard to guess, such as four random words, or ten random letters, numbers and symbols.</string>
+	<string name="setup_password_explanation">Your Sanctuary account is stored encrypted on your device, not in the cloud. If you forget your password or uninstall Sanctuary, there\'s no way to recover your account.\n\nChoose a long password that\'s hard to guess, such as four random words, or ten random letters, numbers and symbols.</string>
 	<string name="setup_doze_title">Background Connections</string>
-	<string name="setup_doze_intro">To receive messages, Briar needs to stay connected in the background.</string>
-	<string name="setup_doze_explanation">To receive messages, Briar needs to stay connected in the background. Please disable battery optimizations so Briar can stay connected.</string>
+	<string name="setup_doze_intro">To receive messages, Sanctuary needs to stay connected in the background.</string>
+	<string name="setup_doze_explanation">To receive messages, Sanctuary needs to stay connected in the background. Please disable battery optimizations so Sanctuary can stay connected.</string>
 	<string name="setup_doze_button">Allow Connections</string>
 	<string name="choose_nickname">Choose your nickname</string>
 	<string name="choose_password">Choose your password</string>
@@ -21,9 +23,9 @@
 	<string name="more_info">More Information</string>
 	<string name="don_t_ask_again">Don\'t ask again</string>
 
-	<string name="setup_huawei_text">Please tap the button below and make sure Briar is protected in the \"Protected Apps\" screen.</string>
-	<string name="setup_huawei_button">Protect Briar</string>
-	<string name="setup_huawei_help">If Briar is not added to the protected apps list, it will be unable to run in the background.</string>
+	<string name="setup_huawei_text">Please tap the button below and make sure Sanctuary is protected in the \"Protected Apps\" screen.</string>
+	<string name="setup_huawei_button">Protect Sanctuary</string>
+	<string name="setup_huawei_help">If Sanctuary is not added to the protected apps list, it will be unable to run in the background.</string>
 	<string name="warning_dozed">%s was unable to run in the background</string>
 
 	<!-- Login -->
@@ -32,17 +34,17 @@
 	<string name="sign_in_button">Sign In</string>
 	<string name="forgotten_password">I have forgotten my password</string>
 	<string name="dialog_title_lost_password">Lost Password</string>
-	<string name="dialog_message_lost_password">Your Briar account is stored encrypted on your device, not in the cloud, so we can\'t reset your password. Would you like to delete your account and start again?\n\nCaution: Your identities, contacts and messages will be permanently lost.</string>
-	<string name="startup_failed_notification_title">Briar could not start</string>
+	<string name="dialog_message_lost_password">Your Sanctuary account is stored encrypted on your device, not in the cloud, so we can\'t reset your password. Would you like to delete your account and start again?\n\nCaution: Your identities, contacts and messages will be permanently lost.</string>
+	<string name="startup_failed_notification_title">Sanctuary could not start</string>
 	<string name="startup_failed_notification_text">Tap for more information.</string>
-	<string name="startup_failed_activity_title">Briar Startup Failure</string>
-	<string name="startup_failed_db_error">For some reason, your Briar database is corrupted beyond repair. Your account, your data and all your contacts are lost. Unfortunately, you need to reinstall Briar and set up a new account by choosing \'I have forgotten my password\' at the password prompt.</string>
+	<string name="startup_failed_activity_title">Sanctuary Startup Failure</string>
+	<string name="startup_failed_db_error">For some reason, your Sanctuary database is corrupted beyond repair. Your account, your data and all your contacts are lost. Unfortunately, you need to reinstall Sanctuary and set up a new account by choosing \'I have forgotten my password\' at the password prompt.</string>
 	<string name="startup_failed_data_too_old_error">Your account was created with an old version of this app and cannot be opened with this version. You must either reinstall the old version or delete your old account by choosing \'I have forgotten my password\' at the password prompt.</string>
 	<string name="startup_failed_data_too_new_error">This version of the app is too old. Please upgrade to the latest version and try again.</string>
-	<string name="startup_failed_service_error">Briar was unable to start a required plugin. Reinstalling Briar usually solves this problem. However, please note that you will then lose your account and all data associated with it since Briar is not using central servers to store your data on.</string>
+	<string name="startup_failed_service_error">Sanctuary was unable to start a required plugin. Reinstalling Sanctuary usually solves this problem. However, please note that you will then lose your account and all data associated with it since Sanctuary is not using central servers to store your data on.</string>
 	<plurals name="expiry_warning">
-		<item quantity="one">This is a test version of Briar. Your account will expire in %d day and cannot be renewed.</item>
-		<item quantity="other">This is a test version of Briar. Your account will expire in %d days and cannot be renewed.</item>
+		<item quantity="one">This is a test version of Sanctuary. Your account will expire in %d day and cannot be renewed.</item>
+		<item quantity="other">This is a test version of Sanctuary. Your account will expire in %d days and cannot be renewed.</item>
 	</plurals>
 	<string name="expiry_update">The testing expiry date has been extended. Your account will now expire in %d days.</string>
 	<string name="expiry_date_reached">This software has expired.\nThank you for testing!</string>
@@ -65,8 +67,8 @@
 	<string name="transport_lan">Wi-Fi</string>
 
 	<!-- Notifications -->
-	<string name="ongoing_notification_title">Signed into Briar</string>
-	<string name="ongoing_notification_text">Touch to open Briar.</string>
+	<string name="ongoing_notification_title">Signed into Sanctuary</string>
+	<string name="ongoing_notification_text">Touch to open Sanctuary.</string>
 	<plurals name="private_message_notification_text">
 		<item quantity="one">New private message.</item>
 		<item quantity="other">%d new private messages.</item>
@@ -139,7 +141,7 @@
 
 	<!-- Introductions -->
 	<string name="introduction_onboarding_title">Introduce your contacts</string>
-	<string name="introduction_onboarding_text">You can introduce your contacts to each other, so they don\'t need to meet in person to connect on Briar.</string>
+	<string name="introduction_onboarding_text">You can introduce your contacts to each other, so they don\'t need to meet in person to connect on Sanctuary.</string>
 	<string name="introduction_activity_title">Select Contact</string>
 	<string name="introduction_message_title">Introduce Contacts</string>
 	<string name="introduction_message_hint">Add a message (optional)</string>
@@ -337,7 +339,7 @@
 	<string name="password_changed">Password has been changed.</string>
 	<string name="panic_setting">Panic button setup</string>
 	<string name="panic_setting_title">Panic button</string>
-	<string name="panic_setting_hint">Configure how Briar will react when you use a panic button app</string>
+	<string name="panic_setting_hint">Configure how Sanctuary will react when you use a panic button app</string>
 	<string name="panic_app_setting_title">Panic Button App</string>
 	<string name="unknown_app">an unknown app</string>
 	<string name="panic_app_setting_summary">No app has been set</string>
@@ -345,10 +347,10 @@
 	<string name="dialog_title_connect_panic_app">Confirm Panic App</string>
 	<string name="dialog_message_connect_panic_app">Are you sure that you want to allow %1$s to trigger destructive panic button actions?</string>
 	<string name="lock_setting_title">Sign Out</string>
-	<string name="lock_setting_summary">Sign out of Briar if a panic button is pressed</string>
+	<string name="lock_setting_summary">Sign out of Sanctuary if a panic button is pressed</string>
 	<string name="purge_setting_title">Delete Account</string>
-	<string name="purge_setting_summary">Delete your Briar account if a panic button is pressed. Caution: This will permanently delete your identities, contacts and messages</string>
-	<string name="uninstall_setting_title">Uninstall Briar</string>
+	<string name="purge_setting_summary">Delete your Sanctuary account if a panic button is pressed. Caution: This will permanently delete your identities, contacts and messages</string>
+	<string name="uninstall_setting_title">Uninstall Sanctuary</string>
 	<string name="uninstall_setting_summary">This requires manual confirmation in a panic event</string>
 
 	<!-- Settings Notifications -->
@@ -381,10 +383,10 @@
 	<string name="link_warning_open_link">Open Link</string>
 
 	<!-- Crash Reporter -->
-	<string name="crash_report_title">Briar Crash Report</string>
-	<string name="briar_crashed">Sorry, Briar has crashed.</string>
+	<string name="crash_report_title">Sanctuary Crash Report</string>
+	<string name="Sanctuary_crashed">Sorry, Sanctuary has crashed.</string>
 	<string name="not_your_fault">This is not your fault.</string>
-	<string name="please_send_report">Please help us build a better Briar by sending us a crash report.</string>
+	<string name="please_send_report">Please help us build a better Sanctuary by sending us a crash report.</string>
 	<string name="report_is_encrypted">We promise that the report is encrypted and sent securely.</string>
 	<string name="feedback_title">Feedback</string>
 	<string name="describe_crash">Describe what happened (optional)</string>
@@ -395,20 +397,22 @@
 	<string name="could_not_load_report_data">Could not load report data.</string>
 	<string name="send_report">Send report</string>
 	<string name="close">Close</string>
-	<string name="dev_report_saved">Report saved. It will be sent the next time you log into Briar.</string>
+	<string name="dev_report_saved">Report saved. It will be sent the next time you log into Sanctuary.</string>
 
 	<!-- Sign Out -->
-	<string name="progress_title_logout">Signing out of Briar…</string>
+	<string name="progress_title_logout">Signing out of Sanctuary…</string>
 
 	<!-- Screen Filters & Tapjacking -->
 	<string name="screen_filter_title">Screen overlay detected</string>
-	<string name="screen_filter_body">Another app is drawing on top of Briar. To protect your security, Briar will not respond to touches when another app is drawing on top.\n\nThe following apps might be drawing on top:\n\n%1$s</string>
+	<string name="screen_filter_body">Another app is drawing on top of Sanctuary. To protect your security, Sanctuary will not respond to touches when another app is drawing on top.\n\nThe following apps might be drawing on top:\n\n%1$s</string>
 	<string name="screen_filter_allow">Allow these apps to draw on top</string>
 
 	<!-- Permission Requests -->
 	<string name="permission_camera_title">Camera permission</string>
-	<string name="permission_camera_request_body">To scan the QR code, Briar needs access to the camera.</string>
+	<string name="permission_camera_request_body">To scan the QR code, Sanctuary needs access to the camera.</string>
 	<string name="permission_camera_denied_body">You have denied access to the camera, but adding contacts requires using the camera.\n\nPlease consider granting access.</string>
 	<string name="permission_camera_denied_toast">Camera permission was not granted</string>
+	<string name="journey_button">Journey</string>
+	<string name="emergency_button">Emergency</string>
 
 </resources>

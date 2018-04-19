@@ -78,7 +78,7 @@ public class BriarApplicationImpl extends Application
 	public void onCreate() {
 		super.onCreate();
 
-		if (IS_DEBUG_BUILD) enableStrictMode();
+		//if (IS_DEBUG_BUILD) enableStrictMode();
 		Logger.getLogger("").setLevel(DEFAULT_LOG_LEVEL);
 		LOG.info("Created");
 
