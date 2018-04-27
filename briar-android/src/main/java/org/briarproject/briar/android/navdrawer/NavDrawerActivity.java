@@ -29,13 +29,12 @@ import org.briarproject.bramble.api.plugin.TransportId;
 import org.briarproject.briar.R;
 import org.briarproject.briar.android.activity.ActivityComponent;
 import org.briarproject.briar.android.activity.BriarActivity;
-import org.briarproject.briar.android.blog.FeedFragment;
 import org.briarproject.briar.android.contact.ContactListFragment;
 import org.briarproject.briar.android.controller.handler.UiResultHandler;
-import org.briarproject.briar.android.forum.ForumListFragment;
 import org.briarproject.briar.android.fragment.BaseFragment;
 import org.briarproject.briar.android.fragment.BaseFragment.BaseFragmentListener;
 import org.briarproject.briar.android.fragment.SignOutFragment;
+import org.briarproject.briar.android.journey.JourneyFragment;
 import org.briarproject.briar.android.navdrawer.NavDrawerController.ExpiryWarning;
 import org.briarproject.briar.android.privategroup.list.GroupListFragment;
 import org.briarproject.briar.android.settings.SettingsActivity;
@@ -88,12 +87,12 @@ public class NavDrawerActivity extends BriarActivity implements
 		if (intent.getBooleanExtra(INTENT_GROUPS, false)) {
 			startFragment(GroupListFragment.newInstance(), R.id.nav_btn_groups);
 		} else if (intent.getBooleanExtra(INTENT_JOURNEY, false)) {
-			startFragment(ForumListFragment.newInstance(), R.id.nav_btn_journey);
+			startFragment(JourneyFragment.newInstance(), R.id.nav_btn_journey);
 		} else if (intent.getBooleanExtra(INTENT_CONTACTS, false)) {
 			startFragment(ContactListFragment.newInstance(),
 					R.id.nav_btn_contacts);
 		} else if (intent.getBooleanExtra(INTENT_EMERGENCY, false)) {
-			startFragment(FeedFragment.newInstance(), R.id.nav_btn_emergency);
+			startFragment(JourneyFragment.newInstance(), R.id.nav_btn_emergency);
 		}
 		setIntent(null);
 	}
@@ -185,10 +184,10 @@ public class NavDrawerActivity extends BriarActivity implements
 				startFragment(GroupListFragment.newInstance());
 				break;
 			case R.id.nav_btn_journey:
-				startFragment(ForumListFragment.newInstance());
+				startFragment(JourneyFragment.newInstance());
 				break;
 			case R.id.nav_btn_emergency:
-				startFragment(FeedFragment.newInstance());
+				startFragment(JourneyFragment.newInstance());
 				break;
 			case R.id.nav_btn_settings:
 				startActivity(new Intent(this, SettingsActivity.class));

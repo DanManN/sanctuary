@@ -26,6 +26,7 @@ import org.briarproject.briar.android.fragment.ScreenFilterDialogFragment;
 import org.briarproject.briar.android.introduction.ContactChooserFragment;
 import org.briarproject.briar.android.introduction.IntroductionActivity;
 import org.briarproject.briar.android.introduction.IntroductionMessageFragment;
+import org.briarproject.briar.android.journey.JourneyFragment;
 import org.briarproject.briar.android.keyagreement.IntroFragment;
 import org.briarproject.briar.android.keyagreement.KeyAgreementActivity;
 import org.briarproject.briar.android.keyagreement.ShowQrCodeFragment;
@@ -177,6 +178,10 @@ public interface ActivityComponent {
 	void inject(RevealContactsFragment activity);
 
 	void inject(ForumListFragment fragment);
+
+	void inject(JourneyFragment fragment);
+
+	//void inject(EmergencyFragment fragment);
 
 	void inject(FeedFragment fragment);
 

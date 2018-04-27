@@ -17,6 +17,7 @@ import org.briarproject.briar.android.activity.ActivityComponent;
 import org.briarproject.briar.android.activity.BaseActivity;
 import org.briarproject.briar.android.controller.BriarController;
 import org.briarproject.briar.android.controller.handler.UiResultHandler;
+import org.briarproject.briar.android.journey.JourneyTimer;
 import org.briarproject.briar.android.util.UiUtils;
 
 import javax.inject.Inject;
@@ -86,6 +87,7 @@ public class PasswordActivity extends BaseActivity {
 		// If the user has already signed in, clean up this instance
 		if (briarController.hasEncryptionKey()) {
 			setResult(RESULT_OK);
+			JourneyTimer.loadSavedJourneys(getApplicationContext());
 			finish();
 		}
 	}
@@ -138,6 +140,7 @@ public class PasswordActivity extends BaseActivity {
 					public void onResultUi(@NonNull Boolean result) {
 						if (result) {
 							setResult(RESULT_OK);
+							JourneyTimer.loadSavedJourneys(getApplicationContext());
 							supportFinishAfterTransition();
 							// don't show closing animation,
 							// but one for opening NavDrawerActivity
