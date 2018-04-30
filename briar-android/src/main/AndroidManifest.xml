@@ -380,7 +380,7 @@
 
 		<receiver android:name=".android.journey.AlarmReceiver">
 			<intent-filter>
-				<action android:name="android.intent.action.BATTERY_LOW" />
+				<action android:name="com.sanctuary.emergency" />
 			</intent-filter>
 		</receiver>
 

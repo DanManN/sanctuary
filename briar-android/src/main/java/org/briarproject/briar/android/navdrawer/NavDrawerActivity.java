@@ -31,6 +31,7 @@ import org.briarproject.briar.android.activity.ActivityComponent;
 import org.briarproject.briar.android.activity.BriarActivity;
 import org.briarproject.briar.android.contact.ContactListFragment;
 import org.briarproject.briar.android.controller.handler.UiResultHandler;
+import org.briarproject.briar.android.emergency.EmergencyFragment;
 import org.briarproject.briar.android.fragment.BaseFragment;
 import org.briarproject.briar.android.fragment.BaseFragment.BaseFragmentListener;
 import org.briarproject.briar.android.fragment.SignOutFragment;
@@ -92,7 +93,7 @@ public class NavDrawerActivity extends BriarActivity implements
 			startFragment(ContactListFragment.newInstance(),
 					R.id.nav_btn_contacts);
 		} else if (intent.getBooleanExtra(INTENT_EMERGENCY, false)) {
-			startFragment(JourneyFragment.newInstance(), R.id.nav_btn_emergency);
+			startFragment(EmergencyFragment.newInstance(), R.id.nav_btn_emergency);
 		}
 		setIntent(null);
 	}
@@ -187,7 +188,7 @@ public class NavDrawerActivity extends BriarActivity implements
 				startFragment(JourneyFragment.newInstance());
 				break;
 			case R.id.nav_btn_emergency:
-				startFragment(JourneyFragment.newInstance());
+				startFragment(EmergencyFragment.newInstance());
 				break;
 			case R.id.nav_btn_settings:
 				startActivity(new Intent(this, SettingsActivity.class));

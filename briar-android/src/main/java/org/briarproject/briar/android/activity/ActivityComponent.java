@@ -18,6 +18,7 @@ import org.briarproject.briar.android.blog.WriteBlogPostActivity;
 import org.briarproject.briar.android.contact.ContactListFragment;
 import org.briarproject.briar.android.contact.ContactModule;
 import org.briarproject.briar.android.contact.ConversationActivity;
+import org.briarproject.briar.android.emergency.EmergencyFragment;
 import org.briarproject.briar.android.forum.CreateForumActivity;
 import org.briarproject.briar.android.forum.ForumActivity;
 import org.briarproject.briar.android.forum.ForumListFragment;
@@ -181,7 +182,7 @@ public interface ActivityComponent {
 
 	void inject(JourneyFragment fragment);
 
-	//void inject(EmergencyFragment fragment);
+	void inject(EmergencyFragment fragment);
 
 	void inject(FeedFragment fragment);
 

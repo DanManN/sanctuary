@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <org.briarproject.briar.android.view.BriarRecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/emergency"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="org.briarproject.briar.android.view.BriarRecyclerViewBehavior">
+
+        <Button
+            android:id="@+id/emergency_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/emergency_button"
+            android:width="100dp"
+            android:textColor="#ffffff"
+            android:background="#ff0000"
+        />
+
+    </org.briarproject.briar.android.view.BriarRecyclerView>
+
+</android.support.design.widget.CoordinatorLayout>

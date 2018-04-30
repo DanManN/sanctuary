@@ -39,7 +39,7 @@ public class JourneyFragment extends BaseEventFragment implements OnClickListene
 
     public final static String TAG = JourneyFragment.class.getName();
     private final static Logger LOG = Logger.getLogger(TAG);
-    private static Date journeyToAdd;
+    private static Calendar journeyToAdd;
 
     @Inject
     AndroidNotificationManager notificationManager;
@@ -172,7 +172,8 @@ public class JourneyFragment extends BaseEventFragment implements OnClickListene
 
         public void onDateSet(DatePicker view, int year, int month, int day) {
             // Do something with the date chosen by the user
-            journeyToAdd = new Date(year, month, day);
+            journeyToAdd = Calendar.getInstance();
+            journeyToAdd.set(year, month, day);
             DialogFragment newFragment = new TimePickerFragment();
             newFragment.show(this.getFragmentManager(), "timePicker");
         }
@@ -195,9 +196,8 @@ public class JourneyFragment extends BaseEventFragment implements OnClickListene
 
     public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
         // Do something with the time chosen by the user
-        journeyToAdd.setHours(hourOfDay);
-        journeyToAdd.setMinutes(minute);
-        //Log.i("d********************: ", "aaaaaaaaaaaaaaaaaaa"+journeyToAdd.toString());
+        journeyToAdd.set(Calendar.HOUR_OF_DAY,hourOfDay);
+        journeyToAdd.set(Calendar.MINUTE,minute);
         JourneyTimer.addJourney(journeyToAdd,getActivity().getApplicationContext());
     }
 }

@@ -12,7 +12,6 @@ public class AlarmReceiver extends BroadcastReceiver {
     public void onReceive(Context context, Intent intent) {
         // TODO Auto-generated method stub
 
-        Log.e("onReceive", "ladskjflsakjdflskjdflskjdfslkjdflasdf");
-        Toast.makeText(context, "OnReceive alarm test", Toast.LENGTH_SHORT).show();
+        Log.e("onReceive", "aaaaaaaaaaaaaaaaaaa: " + "Alerted");
     }
 }
