@@ -15,6 +15,7 @@ import org.briarproject.briar.android.util.ObjectSerializer;
 import org.briarproject.briar.android.util.Prefs;
 
 import java.io.IOException;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 
@@ -60,15 +61,17 @@ public class JourneyTimer {
         Log.d("Date: ", date.toString());
         PendingIntent alarmIntent = startJourney(date, context);
         Log.d("Date: ", alarmIntent.toString());
-        journeys.put(date, startJourney(date, context));
+        journeys.put(date, alarmIntent);
+
     }
 
     public static PendingIntent startJourney(Date date, Context context) {
-        long time = date.getTime() - (new Date()).getTime();
+        long time = date.getTime() - System.currentTimeMillis() + SystemClock.elapsedRealtime();
         alarmMgr = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
-        Intent intent = new Intent(context, JourneyFragment.class);
+        Intent intent = new Intent(context, AlarmReceiver.class);
         PendingIntent alarmIntent = PendingIntent.getBroadcast(context, 0, intent, 0);
         alarmMgr.set(AlarmManager.ELAPSED_REALTIME_WAKEUP, time, alarmIntent);
+        Log.i("d********************: ", "aaaaaaaaaaaaaaaaaaa"+time + " " + alarmMgr.toString());
         return alarmIntent;
     }
 

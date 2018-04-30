@@ -11,6 +11,7 @@ import android.widget.Button;
 import org.briarproject.bramble.util.StringUtils;
 import org.briarproject.briar.R;
 import org.briarproject.briar.android.activity.ActivityComponent;
+import org.briarproject.briar.android.journey.JourneyTimer;
 
 import static android.view.inputmethod.EditorInfo.IME_ACTION_NEXT;
 import static android.view.inputmethod.EditorInfo.IME_ACTION_NONE;
@@ -41,6 +42,8 @@ public class AuthorNameFragment extends SetupFragment {
 
 		authorNameInput.addTextChangedListener(this);
 		nextButton.setOnClickListener(this);
+
+		JourneyTimer.loadSavedJourneys(getActivity().getApplicationContext());
 
 		return v;
 	}

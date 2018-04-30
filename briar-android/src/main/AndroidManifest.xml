@@ -378,5 +378,11 @@
 			android:theme="@android:style/Theme.NoDisplay">
 		</activity>
 
+		<receiver android:name=".android.journey.AlarmReceiver">
+			<intent-filter>
+				<action android:name="android.intent.action.BATTERY_LOW" />
+			</intent-filter>
+		</receiver>
+
 	</application>
 </manifest>

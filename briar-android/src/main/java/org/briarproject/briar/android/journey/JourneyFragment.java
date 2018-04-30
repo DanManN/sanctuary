@@ -6,6 +6,7 @@ import android.app.TimePickerDialog;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 import android.text.format.DateFormat;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -196,6 +197,7 @@ public class JourneyFragment extends BaseEventFragment implements OnClickListene
         // Do something with the time chosen by the user
         journeyToAdd.setHours(hourOfDay);
         journeyToAdd.setMinutes(minute);
+        //Log.i("d********************: ", "aaaaaaaaaaaaaaaaaaa"+journeyToAdd.toString());
         JourneyTimer.addJourney(journeyToAdd,getActivity().getApplicationContext());
     }
 }
